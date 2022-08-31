@@ -4,6 +4,4 @@ orbs:
 workflows:
   production:
     jobs:
-      - rust/clippy:
-      - rust/build:
-      - rust/test:
+      - rust/lint-test-build: {}
