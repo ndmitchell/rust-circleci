@@ -4,6 +4,6 @@ orbs:
 workflows:
   production:
     jobs:
-      - clippy:
-      - build:
-      - test:
+      - rust/clippy:
+      - rust/build:
+      - rust/test:
