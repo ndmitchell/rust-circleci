@@ -4,4 +4,6 @@ orbs:
 workflows:
   production:
     jobs:
+      - run:
+        - command: "sudo apt-get update && apt-get install libssl-dev"
       - rust/lint-test-build: {}
