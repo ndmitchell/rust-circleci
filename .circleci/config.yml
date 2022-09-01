@@ -1,9 +1,12 @@
 version: 2.1
 orbs:
   rust: circleci/rust@1.6.0
-workflows:
-  production:
-    jobs:
-      - run:
-        - command: "sudo apt-get update && apt-get install libssl-dev"
-      - rust/lint-test-build: {}
+jobs:
+  build:
+    docker:
+      - image: cimg/rust:1.49.0
+    steps:
+      - checkout
+      - rust/clippy
+      - rust/build
+      - rust/test
