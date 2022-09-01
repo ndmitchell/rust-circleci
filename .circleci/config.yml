@@ -9,6 +9,9 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install libssl-dev
       - checkout
-      - rust/clippy
+      - rust/clippy:
+        - with_cache: false
       - rust/build
+        - with_cache: false
       - rust/test
+        - with_cache: false
