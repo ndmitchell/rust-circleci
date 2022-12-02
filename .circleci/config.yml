@@ -6,8 +6,8 @@ jobs:
     docker:
       - image: ubuntu:latest
     steps:
-      - run: apt-get update
-      - run: apt-get install libssl-dev cmake protobuf-compiler
+      - run: apt-get update 
+      - run: apt-get install libssl-dev cmake protobuf-compiler --assume-yes
       - run: protoc --version
       - checkout
       - rust/clippy:
