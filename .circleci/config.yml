@@ -4,7 +4,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: ubuntu:latest
+      - image: cimg/rust:1.65.0
     steps:
       - run: apt-get update 
       - run: apt-get install libssl-dev cmake protobuf-compiler --assume-yes
